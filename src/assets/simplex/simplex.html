@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--Desenvolvido como requisito parcial de avaliação da disciplina Pesquisa Operacional
+Prof. Adolfo Pinto Guimarães - Unit 2017.1 Aracaju-SE 16/03/2017 -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Andre Aquilau, Isabelly Ferreira, Miguel Junior." />
+	<meta name="description" content="Algoritmo do método simplex, para maximização e com restrições <=" />
+	<meta name="keywords" content="simplex, algoritmo" />
+	<script type="text/javascript" src="funcoes.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="fraction.js" charset="UTF-8"></script>
+	<link href="bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="estilo.css" />
+	<link rel="icon" href="ramajos.png" />
+	<title>Simplex</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-11">
+				<h1>Simplex</h1>
+        <h2>Alunos: André, Isabelly e Miguel</h2>
+        <h2>Curso: Sistemas de Informação 7º Período</h2>
+			</div>
+			<div class="col-md-1" style="float:right;">
+				<a class="btn primary" onClick="manual()">
+					<img src="info.png" id="btnImg" title="Informações" onmouseover="mouseIn('img')" onmouseout="mouseOut('img')"/>
+				</a>
+			</div>
+		</div>
+		<form name="form1">
+			<fieldset>
+				<div class="row">
+					<div class="col-md-2">
+						<label for="variaveis" class="lbl1">Quantas variáveis?</label>
+					</div>
+					<div class="col-md-1">
+						<input type="number" class="inp1" size="5%" maxlength="10" id="in1" name="variaveis" value="" min="1" autocomplete="off" autofocus style="height: 28px"/>
+					</div>
+				</div>
+				<br />
+				<div class="row">
+					<div class="col-md-2">
+						<label for="regras" class="lbl1">Quantas restrições?</label>
+					</div>
+					<div class="col-md-2">
+						<input type="number" class="inp1" size="5%" maxlength="10" id="in2" name="regras" value="" min="1" autocomplete="off" style="height: 28px" />
+
+						<input type="button" class="inp1 btn btn-primary btn-sm" id="btn1" name="ok" value="ok" onClick="criarForm(variaveis.value,regras.value)"/>
+					</div>
+				</div>
+			</fieldset>
+		</form>
+
+		<br/>
+		<form action="" method="post" name="form2" id="form2" style="display:none">
+			<p><b>Função objetivo</b></p>
+			<div id="aqui"></div>
+			<br/>
+			<label><input type="button" class="btn btn-primary btn-sm" id="btn2" name="calc" value="Resolver" onClick="resolver()" /></label>
+			<label><input type="reset" class="btn btn-success btn-sm" id="btn3" name="novo" value="Novo" onClick="atualizar()"/></label>
+		</form>
+
+		<div id="tab" style="width: 80%; margin: 0 auto;"></div>
+		<label><input type="hidden" class="btn btn-success btn-sm" id="btn4" name="novo2" value="Novo" onClick="atualizar()"/></label>
+	</div>
+</body>
+</html>

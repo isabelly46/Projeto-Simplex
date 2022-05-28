@@ -1,0 +1,27 @@
+/*
+label.lbl1,  input.inp1 {
+	display: block;
+	float: left;
+}
+
+label.lbl1 {
+	text-align: right;
+	width: 15%;
+	padding-right: 8%;
+	padding-bottom: 2%;
+}
+
+br {
+	clear: left;
+}
+*/
+
+input[type="number"] {
+	width:44px;
+	text-align: right;
+}
+
+fieldset {
+	border: solid 1px #000;
+	padding: 2%;
+}
