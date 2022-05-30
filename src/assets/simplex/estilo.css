@@ -19,9 +19,14 @@ br {
 input[type="number"] {
 	width:44px;
 	text-align: right;
-}
+};
 
 fieldset {
 	border: solid 1px #000;
 	padding: 2%;
+};
+.campos-container input[type="number"] {
+  height: 70px;
+  width: 180px;
+  font-size: 4rem;
 }

@@ -20,42 +20,42 @@ Prof. Adolfo Pinto Guimarães - Unit 2017.1 Aracaju-SE 16/03/2017 -->
 	<div class="container">
 		<div class="row">
 			<div class="col-md-11">
-				<h1>Simplex</h1>
-        <h2>Alunos: André, Isabelly e Miguel</h2>
-        <h2>Curso: Sistemas de Informação 7º Período</h2>
+				<h1 style="font-size: 6rem;">Calculando Simplex</h1>
+        <h2 style="font-size: 3rem;">Alunos: André, Isabelly e Miguel</h2>
+        <h2 style="font-size: 3rem;">Curso: Sistemas de Informação 7º Período</h2>
 			</div>
 		</div>
 		<form name="form1">
 			<fieldset>
 				<div class="row">
-					<div class="col-md-2">
-						<label for="variaveis" class="lbl1">Quantas variáveis?</label>
+					<div class="col-md-4">
+						<label for="variaveis" class="lbl1" style="font-size: 4rem;">Quantas variáveis?</label>
 					</div>
-					<div class="col-md-1">
-						<input type="number" class="inp1" size="10%" maxlength="10" id="in1" name="variaveis" value="" min="1" autocomplete="off" autofocus="" style="height: 28px"/>
+					<div class="col-md-12">
+						<input type="number" class="inp1" size="10%" maxlength="10" id="in1" name="variaveis" value="" min="1" autocomplete="off" autofocus="" style="height: 50px; width: 70px; font-size: 4rem; border: 5px solid #000000; border-radius: 6px;"/>
 					</div>
 				</div>
 				<br/>
 				<div class="row">
-					<div class="col-md-2">
-						<label for="regras" class="lbl1">Quantas restrições?</label>
+					<div class="col-md-4">
+						<label for="regras" class="lbl1" style="font-size: 4rem;">Quantas restrições?</label>
 					</div>
-					<div class="col-md-2">
-						<input type="number" class="inp1" size="10%" maxlength="10" id="in2" name="regras" value="" min="1" autocomplete="off" style="height: 28px"/>
+					<div class="col-md-4">
+						<input type="number" class="inp1" size="10%" maxlength="10" id="in2" name="regras" value="" min="1" autocomplete="off" style="height: 50px; width: 70px; font-size: 4rem; border: 5px solid #000000; border-radius: 6px;"/>
 
-						<input type="button" class="inp1 btn btn-primary btn-sm" id="btn1" name="ok" value="ok" onclick="criarForm(variaveis.value,regras.value)"/>
+						<input type="button" class="inp1 btn btn-primary btn-sm" id="btn1" name="ok" value="ok" onclick="criarForm(variaveis.value,regras.value)" style="height: 45px; width: 65px; font-size: 2.7rem; margin-left: 10px;"/>
 					</div>
 				</div>
 			</fieldset>
 		</form>
 
 		<br/>
-		<form action="" method="post" name="form2" id="form2" style="display:none">
-			<p><b>Função objetivo</b></p>
-			<div id="aqui"></div>
+		<form action="" method="post" name="form2" id="form2" style="display:none;">
+			<p><b style="height: 50px; width: 70px; font-size: 4rem;">Função objetivo</b></p>
+			<div class="campos-container" id="aqui"></div>
 			<br/>
-			<label><input type="button" class="btn btn-primary btn-sm" id="btn2" name="calc" value="Resolver" onclick="resolver()"/></label>
-			<label><input type="reset" class="btn btn-success btn-sm" id="btn3" name="novo" value="Novo" onclick="atualizar()"/></label>
+			<label><input type="button" class="btn btn-primary btn-sm" id="btn2" name="calc" value="Resolver" onclick="resolver()" style="height: 70px; width: 180px; font-size: 4rem;"/></label>
+			<label><input type="reset" class="btn btn-success btn-sm" id="btn3" name="novo" value="Novo" onclick="atualizar()"style="height: 70px; width: 115px; font-size: 4rem;"/></label>
 		</form>
 
 		<div id="tab" style="width: 80%; margin: 0 auto;"></div>
